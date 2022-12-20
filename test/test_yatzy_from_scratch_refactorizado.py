@@ -2,7 +2,7 @@
 # No escribir con caracteres regionales
 
 import pytest
-from yatzy_refactorizado import Yatzy
+from src.yatzy_refactorizado import Yatzy
 
 
 def test_chance():

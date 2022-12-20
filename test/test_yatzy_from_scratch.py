@@ -1,10 +1,10 @@
 import pytest
-from yatzy import Yatzy
+from src.yatzy import Yatzy
 
 # Chance
 # The player scores the sum of all dice, no matter what they read.
 
-
+@pytest
 def test_chance():
     # iterar sobre *args evita codigo cableado a 5 argumentos
     assert 15 == Yatzy.chance(1, 2, 3, 4, 5)
@@ -18,7 +18,7 @@ def inyector():
     tirada = Yatzy(1, 2, 3, 4, 5)
     return tirada
 
-
+@pytest
 def test_fours(inyector):
     # Es necesario un objeto ya creado
     valorEsperado = 4
