@@ -1,9 +1,5 @@
 # Pytest cache
-.pytest_cache
-
-# Pytest SRC y TEST
 __pycache__/
 
-__pycache__/
 
 
