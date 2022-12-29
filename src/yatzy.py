@@ -10,7 +10,7 @@ class Yatzy:
 
     @staticmethod
     def yatzy(*args):
-        if args.count(len(args)) == 5:
+        if len(set(args)) == 1:
             return 50
         else:
             return 0

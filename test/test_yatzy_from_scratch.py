@@ -10,6 +10,7 @@ def test_chance():
 def test_yatzy():
     assert Yatzy.yatzy(5, 5, 5, 5, 5) == 50
     assert Yatzy.yatzy(5, 5, 5, 5, 4) == 0
+    assert Yatzy.yatzy(6, 6, 6, 6, 6) == 50
 
 def test_ones():
     assert Yatzy.ones(1, 2, 3, 4, 1) == 2
