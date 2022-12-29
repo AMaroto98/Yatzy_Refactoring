@@ -13,6 +13,11 @@ def test_yatzy():
     assert Yatzy.yatzy(5, 5, 5, 5, 4) == 0
 
 
+def test_ones():
+    assert Yatzy.ones(1, 2, 3, 4, 1) == 2
+    assert Yatzy.ones(1, 1, 1, 4, 5) == 3
+    assert Yatzy.ones(5, 2, 6, 4, 5) == 0
+
 # @pytest.fixture
 # def inyector():
 #     # Es el setup de unittest o de JUnit

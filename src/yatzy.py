@@ -3,36 +3,28 @@ class Yatzy:
     # Usamos el *args para poder para el número que queramos de parámetros.
     @staticmethod
     def chance(*args):
+
         total = 0
         for i in args:
             total += i
         return total
 
-
     @staticmethod
     def yatzy(*args):
+
         if args.count(len(args)) == 5:
             return 50
         else:
             return 0
 
-
     @staticmethod
-    def ones( d1,  d2,  d3,  d4,  d5):
-        sum = 0
-        if (d1 == 1):
-            sum += 1
-        if (d2 == 1):
-            sum += 1
-        if (d3 == 1):
-            sum += 1
-        if (d4 == 1):
-            sum += 1
-        if (d5 == 1): 
-            sum += 1
+    def ones(*args):
 
-        return sum
-    
+        total = 0
+        for i in args:
+            if i == 1:
+                total += i
+        return total
 
     @staticmethod
     def twos( d1,  d2,  d3,  d4,  d5):
