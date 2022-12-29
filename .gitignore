@@ -1,0 +1,9 @@
+# Pytest cache
+.pytest_cache
+
+# Pytest SRC y TEST
+test/__pycache__
+
+src/__pycache__
+
+
