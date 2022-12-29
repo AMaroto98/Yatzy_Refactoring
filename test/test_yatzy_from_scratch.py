@@ -41,6 +41,11 @@ def test_sixes():
     assert Yatzy.sixes(6, 6, 6, 5, 5) == 18
     assert Yatzy.sixes(3, 3, 5, 3, 1) == 0
 
+def test_score_pair():
+    assert Yatzy.score_pair(5, 5, 1, 6, 1) == 10
+    assert Yatzy.score_pair(6, 6, 1, 3, 5) == 12
+    assert Yatzy.score_pair(3, 4, 5, 2, 1) == 0
+
 # @pytest.fixture
 # def inyector():
 #     # Es el setup de unittest o de JUnit

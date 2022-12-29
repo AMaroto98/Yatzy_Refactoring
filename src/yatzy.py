@@ -55,7 +55,7 @@ class Yatzy:
                 total += i
         return total
     
-
+    @staticmethod
     def sixes(*args):
         total = 0
         for i in args:
@@ -64,17 +64,10 @@ class Yatzy:
         return total
     
     @staticmethod
-    def score_pair( d1,  d2,  d3,  d4,  d5):
-        counts = [0]*6
-        counts[d1-1] += 1
-        counts[d2-1] += 1
-        counts[d3-1] += 1
-        counts[d4-1] += 1
-        counts[d5-1] += 1
-        at = 0
-        for at in range(6):
-            if (counts[6-at-1] == 2):
-                return (6-at)*2
+    def score_pair(*args):
+        for i in range(6, 0, -1):
+            if args.count(i) == 2:
+                return i * 2
         return 0
     
     @staticmethod
