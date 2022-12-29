@@ -47,14 +47,13 @@ class Yatzy:
                 total += i
         return total
     
-
-    def fives(self):
-        s = 0
-        i = 0
-        for i in range(len(self.dice)): 
-            if (self.dice[i] == 5):
-                s = s + 5
-        return s
+    @staticmethod
+    def fives(*args):
+        total = 0
+        for i in args:
+            if i == 5:
+                total += i
+        return total
     
 
     def sixes(self):
