@@ -56,12 +56,12 @@ class Yatzy:
         return total
     
 
-    def sixes(self):
-        sum = 0
-        for at in range(len(self.dice)): 
-            if (self.dice[at] == 6):
-                sum = sum + 6
-        return sum
+    def sixes(*args):
+        total = 0
+        for i in args:
+            if i == 6:
+                total += i
+        return total
     
     @staticmethod
     def score_pair( d1,  d2,  d3,  d4,  d5):

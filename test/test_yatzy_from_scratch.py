@@ -36,6 +36,11 @@ def test_fives():
     assert Yatzy.fives(2, 5, 2, 5, 5) == 15
     assert Yatzy.fives(3, 3, 6, 3, 1) == 0
 
+def test_sixes():
+    assert Yatzy.sixes(5, 2, 1, 6, 1) == 6
+    assert Yatzy.sixes(6, 6, 6, 5, 5) == 18
+    assert Yatzy.sixes(3, 3, 5, 3, 1) == 0
+
 # @pytest.fixture
 # def inyector():
 #     # Es el setup de unittest o de JUnit
