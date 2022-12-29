@@ -7,9 +7,9 @@ from src.yatzy import Yatzy
 @pytest
 def test_chance():
     # iterar sobre *args evita codigo cableado a 5 argumentos
-    assert 15 == Yatzy.chance(1, 2, 3, 4, 5)
-    assert 14 == Yatzy.chance(1, 1, 3, 3, 6)
-    assert 21 == Yatzy.chance(4, 5, 5, 6, 1)
+    assert Yatzy.chance(1, 2, 3, 4, 5) == 15 
+    assert Yatzy.chance(1, 1, 3, 3, 6) == 14
+    assert Yatzy.chance(4, 5, 5, 6, 1) == 21 
 
 
 @pytest.fixture

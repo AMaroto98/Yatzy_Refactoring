@@ -1,13 +1,11 @@
 class Yatzy:
 
+    # Usamos el *args para poder para el número que queramos de parámetros.
     @staticmethod
-    def chance(d1, d2, d3, d4, d5):
+    def chance(*args):
         total = 0
-        total += d1
-        total += d2
-        total += d3
-        total += d4
-        total += d5
+        for i in args:
+            total += i
         return total
 
     @staticmethod
