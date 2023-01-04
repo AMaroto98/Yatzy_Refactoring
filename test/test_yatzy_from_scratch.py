@@ -47,16 +47,36 @@ def test_score_pair():
     assert Yatzy.score_pair(6, 6, 1, 3, 5) == 12
     assert Yatzy.score_pair(3, 4, 5, 2, 1) == 0
 
-# @pytest.fixture
-# def inyector():
-#     # Es el setup de unittest o de JUnit
-#     tirada = Yatzy(1, 2, 3, 4, 5)
-#     return tirada
+def test_two_pair():
+    assert Yatzy.two_pair(1, 1, 2, 2, 3) == 6
+    assert Yatzy.two_pair(6, 6, 2, 4, 4) == 20
+    assert Yatzy.two_pair(1, 1, 2, 3, 4) == 0
 
-# @pytest
-# def test_fours(inyector):
-#     # Es necesario un objeto ya creado
-#     valorEsperado = 4
-#     # No puedo testear con fixtures = inyeccion de dependencias
-#     # los metodos estaticos como chance()
-#     assert valorEsperado == inyector.fours()
+def test_three_of_a_kind():
+    assert Yatzy.three_of_a_kind(1, 1, 1, 2, 2) == 3
+    assert Yatzy.three_of_a_kind(6, 6, 4, 6, 2) == 18
+    assert Yatzy.three_of_a_kind(5, 6, 5, 6, 5) == 15
+    assert Yatzy.three_of_a_kind(6, 6, 6, 6, 6) == 0
+
+def test_four_of_a_kind():
+    assert Yatzy.four_of_a_kind(1, 1, 1, 1, 2) == 4
+    assert Yatzy.four_of_a_kind(6, 6, 6, 6, 2) == 24
+    assert Yatzy.four_of_a_kind(5, 1, 5, 5, 5) == 20
+    assert Yatzy.four_of_a_kind(6, 2, 4, 5, 6) == 0
+
+def test_smallStraight():
+    assert Yatzy.smallStraight(2, 2, 3, 4, 5) == 0
+    assert Yatzy.smallStraight(1, 2, 3, 4, 5) == 15
+    assert Yatzy.smallStraight(2, 6, 3, 4, 5) == 0
+
+def test_largeStraight():
+    assert Yatzy.largeStraight(1, 2, 3, 4, 5) == 20
+    assert Yatzy.largeStraight(2, 2, 3, 3, 5) == 0
+
+def test_fullHouse():
+    assert Yatzy.fullHouse(6, 2, 2, 6, 6) == 22
+    assert Yatzy.fullHouse(1, 1, 1, 1, 4) == 0
+
+
+
+
