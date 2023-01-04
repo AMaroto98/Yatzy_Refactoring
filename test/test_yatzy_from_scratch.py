@@ -52,6 +52,22 @@ def test_two_pair():
     assert Yatzy.two_pair(6, 6, 2, 4, 4) == 20
     assert Yatzy.two_pair(1, 1, 2, 3, 4) == 0
 
+def test_three_of_a_kind():
+    assert Yatzy.three_of_a_kind(1, 1, 1, 2, 2) == 3
+    assert Yatzy.three_of_a_kind(6, 6, 4, 6, 2) == 18
+    assert Yatzy.three_of_a_kind(5, 6, 5, 6, 5) == 15
+    assert Yatzy.three_of_a_kind(6, 6, 6, 6, 6) == 0
+
+def test_four_of_a_kind():
+    assert Yatzy.four_of_a_kind(1, 1, 1, 1, 2) == 4
+    assert Yatzy.four_of_a_kind(6, 6, 6, 6, 2) == 24
+    assert Yatzy.four_of_a_kind(5, 1, 5, 5, 5) == 20
+    assert Yatzy.four_of_a_kind(6, 2, 4, 5, 6) == 0
+
+
+    
+
+
 
 # @pytest.fixture
 # def inyector():
