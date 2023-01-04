@@ -69,6 +69,11 @@ def test_smallStraight():
     assert Yatzy.smallStraight(1, 2, 3, 4, 5) == 15
     assert Yatzy.smallStraight(2, 6, 3, 4, 5) == 0
 
+def test_largeStraight():
+    assert Yatzy.largeStraight(1, 2, 3, 4, 5) == 20
+    assert Yatzy.largeStraight(2, 2, 3, 3, 5) == 0
+
+
 
 # @pytest.fixture
 # def inyector():
