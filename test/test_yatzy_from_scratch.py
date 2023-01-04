@@ -73,18 +73,10 @@ def test_largeStraight():
     assert Yatzy.largeStraight(1, 2, 3, 4, 5) == 20
     assert Yatzy.largeStraight(2, 2, 3, 3, 5) == 0
 
+def test_fullHouse():
+    assert Yatzy.fullHouse(6, 2, 2, 6, 6) == 22
+    assert Yatzy.fullHouse(1, 1, 1, 1, 4) == 0
 
 
-# @pytest.fixture
-# def inyector():
-#     # Es el setup de unittest o de JUnit
-#     tirada = Yatzy(1, 2, 3, 4, 5)
-#     return tirada
 
-# @pytest
-# def test_fours(inyector):
-#     # Es necesario un objeto ya creado
-#     valorEsperado = 4
-#     # No puedo testear con fixtures = inyeccion de dependencias
-#     # los metodos estaticos como chance()
-#     assert valorEsperado == inyector.fours()
+

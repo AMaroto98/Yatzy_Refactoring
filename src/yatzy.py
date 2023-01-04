@@ -111,7 +111,6 @@ class Yatzy:
                 return 0
         return 15
     
-
     @staticmethod
     def largeStraight(*args):
         for i in range(2,6):
@@ -120,39 +119,16 @@ class Yatzy:
                 return 0
         return 20
 
-        return 0
-        
-    
-
     @staticmethod
-    def fullHouse( d1,  d2,  d3,  d4,  d5):
-        tallies = []
-        _2 = False
-        i = 0
-        _2_at = 0
-        _3 = False
-        _3_at = 0
+    def fullHouse(*args):
 
-        tallies = [0]*6
-        tallies[d1-1] += 1
-        tallies[d2-1] += 1
-        tallies[d3-1] += 1
-        tallies[d4-1] += 1
-        tallies[d5-1] += 1
+        score_pair = Yatzy.score_pair(*args)
+        three_of_a_kind = Yatzy.three_of_a_kind(*args)
+        maybeFullhouse = score_pair and three_of_a_kind
 
-        for i in range(6):
-            if (tallies[i] == 2): 
-                _2 = True
-                _2_at = i+1
-            
-
-        for i in range(6):
-            if (tallies[i] == 3): 
-                _3 = True
-                _3_at = i+1
-            
-
-        if (_2 and _3):
-            return _2_at * 2 + _3_at * 3
+        if maybeFullhouse:
+            return score_pair + three_of_a_kind
         else:
             return 0
+
+    
