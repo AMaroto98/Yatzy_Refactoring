@@ -64,6 +64,10 @@ def test_four_of_a_kind():
     assert Yatzy.four_of_a_kind(5, 1, 5, 5, 5) == 20
     assert Yatzy.four_of_a_kind(6, 2, 4, 5, 6) == 0
 
+def test_smallStraight():
+    assert Yatzy.smallStraight(2, 2, 3, 4, 5) == 0
+    assert Yatzy.smallStraight(1, 2, 3, 4, 5) == 15
+    assert Yatzy.smallStraight(2, 6, 3, 4, 5) == 0
 
 
 # @pytest.fixture
