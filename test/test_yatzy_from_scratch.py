@@ -65,9 +65,6 @@ def test_four_of_a_kind():
     assert Yatzy.four_of_a_kind(6, 2, 4, 5, 6) == 0
 
 
-    
-
-
 
 # @pytest.fixture
 # def inyector():
